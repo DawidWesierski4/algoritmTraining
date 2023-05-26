@@ -42,6 +42,35 @@ public:
 
 };
 
+int graph_forceFindCommon(std::vector<int> arr1, std::vector<int> arr2)
+{
+	for(auto i:arr1) {
+		for (auto j:arr2) {
+			if(i == j)
+				return i;
+		}
+	}
+	return -1;
+}
+
+class Node {
+	public:
+	std::string name;
+	/* contains neighbours */
+	std::list<std::string> nbrs;
+
+	Node(std::string name) {
+		this->name = name;
+	}
+};
+
+class simple_starGraph {
+public:
+	int findCenter(std::vector<std::vector<int>>& edges) {
+		return graph_forceFindCommon(edges[0], edges[1]);
+	}
+};
+
 void graph_printLogo() {
 	std::cout<<" ██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗███████╗"<<std::endl;
 	std::cout<<"██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║  ██║██╔════╝"<<std::endl;
