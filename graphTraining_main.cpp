@@ -18,7 +18,7 @@ public:
 	 * adds edge to adjacency list
 	 * @i = starting node
 	 * @j = end node
-	 * @dir = directed connection
+	 * @dir = directed connection flag
 	 */
 	void addEdge(int i, int j, bool dir=false)
 	{
@@ -29,7 +29,14 @@ public:
 
 	void printAdjList()
 	{
-		std::cout<<"---"<<std::endl;
+		for (int i = 0; i < V; i++) {
+			std::cout<<"========================"<<i;
+			std::cout<<"========================"<<std::endl;
+			for (auto node:l[i]) {
+				std::cout << node << "   ";
+			}
+			std::cout<<std::endl;
+		}
 	}
 
 
