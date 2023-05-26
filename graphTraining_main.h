@@ -1,0 +1,6 @@
+#ifndef GRAPHTRAINING
+#define GRAPHTRAINING
+
+
+
+#endif /* GRAPH TRAINING HEADER GUARD */
